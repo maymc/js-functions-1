@@ -4,12 +4,21 @@
  * @return {string} the number as a string
  */
 
+function numberToString(n){
+    return n.toString();
+};
+numberToString(5);
 
 /**
  * Adds one to a given number.
  * @param {number} n
  * @return {number}
  */
+
+ function increase(n){
+     return n+1;
+ };
+ increase(3);
 
 
 /**
@@ -18,6 +27,11 @@
  * @return {number}
  */
 
+function decrease(n){
+    return n-1;
+};
+decrease(2);
+
 
 /**
  * Adds two numbers.
@@ -25,7 +39,10 @@
  * @param {number} y
  * @return {number} the sum
  */
-
+function add(x,y){
+    return x+y;
+};
+add(3,5);
 
 /**
  * Subtracts the second number from the first.
@@ -33,7 +50,10 @@
  * @param {number} y
  * @return {number} the difference
  */
-
+function subtract(x,y){
+    return x - y;
+};
+subtract(6,12);
 
 /**
  * Multiplies two numbers.
@@ -41,7 +61,10 @@
  * @param {number} y
  * @return {number} the product
  */
-
+function multiply(x,y){
+    return x*y;
+};
+multiply(3,5);
 
 /**
  * Divides the first number by the second.
@@ -49,7 +72,10 @@
  * @param {number} y
  * @return {number} the quotient
  */
-
+function divide(x,y){
+    return x/y;
+};
+divide(10,5);
 
 /**
  * Multiplies a number by itself.
@@ -57,6 +83,9 @@
  * @return {number} squared
  */
 
+ function square(x){
+     return x*x;
+ };
 
 /**
  * Performs a mathematical operation on two numbers.
@@ -66,6 +95,29 @@
  * @param {number} y
  * @return {number} the result
  */
+
+function calculate(operation, x, y){
+    if(operation === "add"){
+        var sum = x+y;
+        console.log(x + " + " + y + " = " + sum);
+        return sum;
+    }
+    else if(operation === "subtract"){
+        var difference = x-y;
+        console.log(x + " - " + y + " = " + difference);
+        return difference;
+    }
+    else if(operation === "multiply"){
+        var product = x*y;
+        console.log(x + " * " + y + " = " + product);
+        return product;
+    }
+    else if(operation === "divide"){
+        var quotient = x/y;
+        console.log(x + " / " + y + " = " + quotient);
+        return quotient;
+    }
+}
 
 
 /**
