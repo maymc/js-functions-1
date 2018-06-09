@@ -127,6 +127,12 @@ function calculate(operation, x, y){
  * @return {boolean} `a` is larger than `b`
  */
 
+ function isGreaterThan(a, b){
+     if(a > b)
+        return true;
+    else
+        return false;
+ }
 
 /**
  * Returns true if `a` is less than `b`.
@@ -134,7 +140,12 @@ function calculate(operation, x, y){
  * @param {number} b
  * @return {boolean} `a` is smaller than `b`
  */
-
+function isLessThan(a, b){
+    if(a < b)
+       return true;
+   else
+       return false;
+}
 
 /**
  * Returns true if `a` and `b` are equal.
@@ -142,7 +153,12 @@ function calculate(operation, x, y){
  * @param {number} b
  * @return {boolean} the numbers are equal
  */
-
+function areEqual(a, b){
+    if(a === b)
+       return true;
+   else
+       return false;
+}
 
 /**
  * Returns the smallest value of two numbers.
@@ -151,6 +167,13 @@ function calculate(operation, x, y){
  * @return {number} the smallest number
  */
 
+ function minimum(x,y){
+     if(x>y)
+        return y;
+    else
+        return x;
+ }
+
 
 /**
  * Returns the largest value of two numbers.
@@ -158,7 +181,12 @@ function calculate(operation, x, y){
  * @param {number} y
  * @return {number} the largest number
  */
-
+function maximum(x,y){
+    if(x<y)
+       return y;
+   else
+       return x;
+}
 
 /**
  * Returns true if `n` is even.
@@ -166,13 +194,28 @@ function calculate(operation, x, y){
  * @return {boolean} the number is even
  */
 
+ function isEven(n){
+     if(n%2 === 0){
+         return true;
+     }
+     else{
+         return false;
+     }
+ }
 
 /**
  * Returns true if `n` is odd.
  * @param {number} n
  * @return {boolean} the number is odd
  */
-
+function isOdd(n){
+    if(n%2 !== 0){
+        return true;
+    }
+    else{
+        return false;
+    }
+}
 
 /**
  * Returns a letter grade.
@@ -185,7 +228,43 @@ function calculate(operation, x, y){
  * @param {number} total maximum possible score
  * @return {string} the score represented as a letter grade
  */
+function letterGrade(score, total){
+    percent = (score/total)*100;
+    
+    // if(percent>=90){
+    //     return "A";
+    // }
+    // else if(percent>=80){
+    //     return "B";
+    // }
+    // else if(percent>=70){
+    //     return "C";
+    // }
+    // else if(percent>=60){
+    //     return "D";
+    // }
+    // else
+    //     return "F";
 
+    //If the case evaluates to true
+    switch(true) {
+        case percent>=90:
+            return "A";
+            break;
+        case percent>=80:
+            return "B";
+            break;
+        case percent>=70:
+            return "C";
+            break;
+        case percent>=60:
+            return "D";
+            break;
+        case percent<=59:
+            return "F";
+            break;  
+    }
+}
 
 /**
  * Checks if a `restaurant` object has a `reviews` property.
@@ -195,6 +274,16 @@ function calculate(operation, x, y){
  * @return {object} restaurant
  */
 
+ function incrementReviews(restaurant){
+     if(restaurant.hasOwnProperty('reviews')){
+         restaurant.reviews++;
+         return restaurant;
+     }
+     else{
+        restaurant.reviews = 1;
+        return restaurant;
+     }
+ }
 
 /**
  * Joins two strings with a space.
@@ -202,6 +291,13 @@ function calculate(operation, x, y){
  * @param {string} word2
  * @return {string} joined the words joined with a space
  */
+function combine(word1, word2){
+    var wordArray = [];
+    wordArray.push(word1);
+    wordArray.push(word2);
+    var twoWords = wordArray.join(" ");
+    return twoWords;
+}
 
 
 /**
@@ -212,3 +308,10 @@ function calculate(operation, x, y){
  * @return {object} circle
  */
 
+function createCircle(radius){
+    var circle = {
+        circumference : 2*Math.PI*radius,
+        area : Math.PI*radius*radius,
+    }
+    return circle;
+}
