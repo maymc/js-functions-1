@@ -97,26 +97,48 @@ divide(10,5);
  */
 
 function calculate(operation, x, y){
-    if(operation === "add"){
-        var sum = x+y;
-        console.log(x + " + " + y + " = " + sum);
-        return sum;
+
+    switch(operation){
+        case "add" :
+            var sum = x+y;
+            console.log(x + " + " + y + " = " + sum);
+            return sum;
+        case "subtract" :
+            var difference = x-y;
+            console.log(x + " - " + y + " = " + difference);
+            return difference;  
+        case "multiply" :
+            var product = x*y;
+            console.log(x + " * " + y + " = " + product);
+            return product;
+        case "divide" :
+            var quotient = x/y;
+            console.log(x + " / " + y + " = " + quotient);
+            return quotient;
+        default:
+            console.log("operation unavailable");
     }
-    else if(operation === "subtract"){
-        var difference = x-y;
-        console.log(x + " - " + y + " = " + difference);
-        return difference;
-    }
-    else if(operation === "multiply"){
-        var product = x*y;
-        console.log(x + " * " + y + " = " + product);
-        return product;
-    }
-    else if(operation === "divide"){
-        var quotient = x/y;
-        console.log(x + " / " + y + " = " + quotient);
-        return quotient;
-    }
+
+    // if(operation === "add"){
+    //     var sum = x+y;
+    //     console.log(x + " + " + y + " = " + sum);
+    //     return sum;
+    // }
+    // else if(operation === "subtract"){
+    //     var difference = x-y;
+    //     console.log(x + " - " + y + " = " + difference);
+    //     return difference;
+    // }
+    // else if(operation === "multiply"){
+    //     var product = x*y;
+    //     console.log(x + " * " + y + " = " + product);
+    //     return product;
+    // }
+    // else if(operation === "divide"){
+    //     var quotient = x/y;
+    //     console.log(x + " / " + y + " = " + quotient);
+    //     return quotient;
+    // }
 }
 
 
@@ -231,39 +253,21 @@ function isOdd(n){
 function letterGrade(score, total){
     percent = (score/total)*100;
     
-    // if(percent>=90){
-    //     return "A";
-    // }
-    // else if(percent>=80){
-    //     return "B";
-    // }
-    // else if(percent>=70){
-    //     return "C";
-    // }
-    // else if(percent>=60){
-    //     return "D";
-    // }
-    // else
-    //     return "F";
-
-    //If the case evaluates to true
-    switch(true) {
-        case percent>=90:
-            return "A";
-            break;
-        case percent>=80:
-            return "B";
-            break;
-        case percent>=70:
-            return "C";
-            break;
-        case percent>=60:
-            return "D";
-            break;
-        case percent<=59:
-            return "F";
-            break;  
+    if(percent>=90){
+        return "A";
     }
+    else if(percent>=80){
+        return "B";
+    }
+    else if(percent>=70){
+        return "C";
+    }
+    else if(percent>=60){
+        return "D";
+    }
+    else
+        return "F";
+
 }
 
 /**
